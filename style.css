@@ -14,7 +14,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: blue;
+    background: var(--purple-color2);
     color: white;
     min-height: 100vh;
 }
