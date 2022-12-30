@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+
+:root {
+    --black-color: rgb(0, 0, 0);
+    --white-color: rgb(255, 255, 255);
+    --primary-color: #14CC97;
+    --purple-color: #b100cd;
+    --purple-color2: #2b013b;
+    --font-family: 'Source Sans Pro', sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: blue;
+    color: white;
+    min-height: 100vh;
+}
+
+.box {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background: var(--black-color);
+    border-radius: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.box::after {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background-image: conic-gradient(transparent, transparent, transparent, var(--purple-color));
+    animation: rotaciona 5s linear infinite;
+    animation-delay: -3s ;
+}
+
+.box::before {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background-image: conic-gradient(transparent, transparent, transparent, purple);
+    animation: rotaciona 5s linear infinite;
+}
+
+.box span{
+    position: absolute;
+    inset: 5px;
+    background: var(--black-color);
+    border-radius: 20px;
+    z-index: 1;
+}
+
+.box h2{
+    position: absolute;
+    color: var(--white-color);
+    font-size: 5rem;
+    z-index: 2;
+}
+
+@keyframes rotaciona {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg)
+    }
+
+
+}
+
